@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantics and Accessibility</title>
+  </head>
+  <body>
+    <audio loop autoplay controls currentTime src="./musdfsic1.mp3">
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
+    <h1>Lego short video</h1>
+    <video
+      role="video"
+      muted
+      autoPictureInPicture
+      autoplay
+      controlslist="nodownload"
+      controls
+      width="500"
+    >
+      <source src="./video1.mp4" type="video/mp4" />
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </body>
+</html>
