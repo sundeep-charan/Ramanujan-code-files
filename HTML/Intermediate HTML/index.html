@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intermediate HTML</title>
+  </head>
+  <body>
+    <!-- <div>
+      <h1>Hi I am a H1 tag</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+        eligendi vitae porro harum excepturi perferendis mollitia reiciendis
+        quos, delectus unde amet similique molestiae obcaecati quae laudantium
+        vel reprehenderit deleniti at magnam assumenda sed labore! Minima dolor
+        quae, illum suscipit eius recusandae impedit aliquid perspiciatis!
+        Quisquam vel, adipisci voluptatibus possimus similique omnis. Soluta
+        temporibus dicta eveniet. Eligendi voluptate laboriosam at adipisci
+        blanditiis nesciunt ratione hic veritatis eum odit distinctio facere
+        laudantium maiores animi, eius ullam cupiditate atque repudiandae
+        dignissimos rerum. Facilis natus eaque nobis nesciunt aliquid commodi
+        quasi velit, autem sit cumque. Ipsum ex maxime laborum. In accusamus ea
+        similique ut.
+      </p>
+    </div> -->
+
+    <!-- <span>
+      <a href="">sdjfklsdjfksdjf</a>
+      <p>sfjksdjfksjfsdjfdklsjskl</p>
+    </span> -->
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>S.no</th>
+          <th>Subject</th>
+          <th>Term 1</th>
+          <th>Term 2</th>
+          <th>Term 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Math</td>
+          <td>87</td>
+          <td>76</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>S.s</td>
+          <td>80</td>
+          <td>65</td>
+          <td>53</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Form -->
+    <form action="./success.html" method="GET">
+      <label for="name">Name </label>
+      <input
+        required
+        name="name"
+        id="name"
+        type="text"
+        placeholder="Enter your name"
+      />
+      <br />
+      <label for="email">Email </label>
+      <input id="email" type="email" placeholder="Enter your email" />
+      <br />
+      <label for="password">password </label>
+      <input
+        name="password"
+        id="password"
+        type="password"
+        placeholder="Enter your password"
+      />
+      <br />
+      <label for="file">File </label>
+      <input id="file" type="file" placeholder="Enter your file" />
+      <br />
+      <label for="terms-yes">I agree to the terms and conditions</label>
+      <input type="checkbox" value="Yes" name="terms" id="terms-yes" />
+      <br />
+      <label for="terms-no">I do not agree to the terms and conditions</label>
+      <input type="checkbox" value="No" name="terms" id="terms-no" />
+      <br />
+      <label for="terms-semiyes"
+        >I semi agree to the terms and conditions</label
+      >
+      <input type="checkbox" value="Semi Yes" name="terms" id="terms-semiyes" />
+      <br />
+      <label for="terms-semino"
+        >I semi do not agree to the terms and conditions</label
+      >
+      <input type="checkbox" value="Semi No" name="terms" id="terms-semino" />
+      <br />
+      <label for="phone">phone </label>
+      <input id="phone" type="number" placeholder="Enter your number" />
+
+      <br />
+      <p>Gender</p>
+      <label for="male">Male</label>
+      <input name="gender" id="male" type="radio" value="Male" />
+      <label for="female">Female</label>
+      <input name="gender" id="female" type="radio" value="Female" />
+      <br />
+      <label for="color">Select your color</label>
+      <input id="color" type="color" />
+      <br />
+      <label for="date">Enter your date</label>
+      <input type="date" id="date" />
+      <br />
+
+      <!-- select, option -->
+      <label for="country">Country</label>
+      <select id="country">
+        <option disabled selected value="">Choose a country</option>
+        <option value="IND">India</option>
+        <option value="USA">America</option>
+        <option value="AUS">Australia</option>
+        <option value="SIN">Singapore</option>
+        <option value="FRA">France</option>
+        <option value="GER">Germany</option>
+      </select>
+      <br />
+      <textarea placeholder="Feedback"></textarea>
+      <br />
+      <input type="submit" value="Submit details" />
+    </form>
+  </body>
+</html>
