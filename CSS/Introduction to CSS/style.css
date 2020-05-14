@@ -1,0 +1,68 @@
+/* Tag selectors */
+span {
+  color: blue;
+}
+
+p {
+  color: brown;
+}
+
+/* Class selectors */
+.secondpara {
+  color: yellow;
+}
+
+.anotherclassname {
+  color: purple;
+}
+
+.innertext {
+  color: blueviolet;
+}
+
+/* Id selectors */
+
+#thirdpara {
+  color: orange;
+}
+
+/* Important attribute */
+/* p {
+  color: magenta !important;
+} */
+
+/* Child selectors */
+.todo-list .todo-list-item {
+  color: coral;
+}
+
+.todo-list .item-2 {
+  background-color: brown;
+}
+
+/* Multiple selectors */
+.container h1,
+.container h2,
+.container h3 {
+  color: darkblue;
+}
+
+/* Immediate child selector */
+.anotherContainer > p {
+  color: darkmagenta;
+}
+
+/* Sibling selector */
+.container .seperate {
+  background: brown;
+}
+
+/* Wildcard selector */
+body * {
+  background-color: deeppink;
+}
+
+/* Attrtibute selector */
+input[type="text"] {
+  background-color: blue;
+}

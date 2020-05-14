@@ -1,0 +1,18 @@
+Introduction to CSS
+CSS selectors, properties & values
+Using CSS in a Web Page
+
+Common CSS Properties
+Lengths
+Colors
+color and background-color
+Styling text
+font-family
+font-size
+font-weight
+font-style
+text-decoration
+text-transform
+text spacing
+Multiple classes for an element
+Specificity
