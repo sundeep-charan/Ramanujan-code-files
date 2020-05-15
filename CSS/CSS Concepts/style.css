@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 10000px;
+}
+
+.display-inline {
+  height: 10px;
+  display: inline-block;
+  width: 200px;
+}
+
+.display-block {
+  height: 100px;
+}
+
+.orange-square {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  padding: 10px 20px 30px 20px;
+  border: 20px solid red;
+
+  margin-bottom: 0;
+
+  position: relative;
+  left: 0px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper-para {
+  position: fixed;
+  top: 50px;
+  left: 100px;
+}

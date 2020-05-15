@@ -1,0 +1,10 @@
+Lengths (px, rem, em, %, vh, vw)
+
+font-family - Type of font
+font-size - Size of font
+font-weight - thickness
+font-style - stlying of fone
+text-decoration - decoration of font
+text-transform - casing of font
+letter-spacing - gap between each letter
+line-height - height of a single line
