@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container {
+  width: 80vw;
+  height: 90vh;
+  background-color: red;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .gibberish {
+  font-size: 18px;
+  color: white;
+}
+
+body .card {
+  height: 50vh;
+  width: 20vw;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+body .card__logo {
+  display: block;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body .card__list {
+  list-style: none;
+}
+
+body .card__listitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+body .card__listitem ion-icon {
+  margin-right: 10px;
+}
+
+body .card__listitem:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.button-alert {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 20px 40px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 50px;
+  background: #ff80ff;
+  color: black;
+}
+
+.button-success {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 25px;
+  background: green;
+}
+
+.button-danger {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 25px;
+  background: #ff9999;
+}
+
+.button-info {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 25px;
+  background: blue;
+}
+/*# sourceMappingURL=style.css.map */

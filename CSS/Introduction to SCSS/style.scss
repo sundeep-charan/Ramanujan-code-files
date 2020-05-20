@@ -1,0 +1,112 @@
+// $variable-name: variablevalue;
+@import "./colors.scss";
+$font-size-lg: 40px;
+$font-size-md: 25px;
+$font-size-sm: 20px;
+$font-size-xs: 16px;
+
+$mb-1: 15px;
+$mb-2: 20px;
+$mb-3: 25px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Container styling
+  .container {
+    width: 80vw;
+    height: 90vh;
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .gibberish {
+      font-size: 18px;
+      color: white;
+    }
+  }
+
+  // Card styling
+  .card {
+    height: 50vh;
+    width: 20vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    // .card__logo
+    &__logo {
+      display: block;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: $font-size-lg;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    // .card__list
+    &__list {
+      list-style: none;
+      &item {
+        display: flex;
+        align-items: center;
+        & ion-icon {
+          margin-right: 10px;
+        }
+        margin-left: 10px;
+        font-size: 16px;
+        font-family: monospace;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+        // .card__listitem--home
+        &--home {
+        }
+      }
+    }
+  }
+}
+
+@mixin button($size: 1) {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: $size * 10px $size * 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: $size * $font-size-md;
+}
+
+.button-alert {
+  @include button(2);
+  background: lighten(purple, 50%);
+  color: black;
+}
+
+.button-success {
+  @include button;
+  background: green;
+}
+
+.button-danger {
+  @include button;
+  background: $red-lighter;
+}
+
+.button-info {
+  @include button;
+  background: blue;
+}
