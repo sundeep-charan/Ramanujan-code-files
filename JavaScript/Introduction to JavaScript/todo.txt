@@ -1,0 +1,4 @@
+Printing
+Variables
+Types of data stored in variables
+Operators
