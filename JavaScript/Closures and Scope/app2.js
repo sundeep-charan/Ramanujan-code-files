@@ -46,10 +46,3 @@ function makeMultiplicationTable(firstNumber) {
 
 // 6 * 5 + 4 = 34
 console.log(makeMultiplicationTable(6)(5)(4));
-
-function firstLevel(message) {
-  function (secondMessage) {
-    return message + " " + secondMessage;
-  };
-}
-console.log(firstLevel("Hi")("There"));

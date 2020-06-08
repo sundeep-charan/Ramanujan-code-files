@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM selectors and event basics</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 class="jazz">DOM selectors and event basics</h1>
+    <h1>DOM</h1>
+    <h1>DOM selectors and</h1>
+    <div class="container">
+      <h2>Container</h2>
+      <section class="hero">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error modi
+          suscipit assumenda perspiciatis nulla sit minus dignissimos porro
+          dicta, veritatis mollitia tempore blanditiis odit magni. Ex explicabo
+          veritatis aspernatur quidem.
+        </p>
+      </section>
+    </div>
+    <div class="container"></div>
+    <div class="hero">
+      <p class="hithere">
+        <span class="inline">I am inline</span>
+      </p>
+      <span class="helloworld">I am outside</span>
+    </div>
+    <script>
+      console.log(document.querySelectorAll(".hero > span"));
+    </script>
+    <span id="unique">Hi there, happy Friday</span>
+    <!-- <script src="./app.js"></script> -->
+    <script src="./app2.js"></script>
+  </body>
+</html>
