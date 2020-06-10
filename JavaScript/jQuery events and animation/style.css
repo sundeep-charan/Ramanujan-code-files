@@ -1,0 +1,32 @@
+button {
+  background: green;
+}
+
+.animationsquare {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: red;
+  position: relative;
+}
+
+.animationsquare.move {
+  animation: move 1.5s 1 linear forwards;
+}
+
+@keyframes move {
+  0% {
+  }
+
+  4% {
+  }
+
+  10% {
+  }
+
+  50% {
+  }
+
+  100% {
+  }
+}
