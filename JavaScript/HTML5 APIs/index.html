@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 APIs</title>
+  </head>
+  <style>
+    .container {
+      width: 400px;
+      height: 500px;
+      background: magenta;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+    }
+
+    div:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    .red {
+      background-color: red;
+    }
+  </style>
+  <body>
+    <h1>HTML5 APIs</h1>
+    <div class="container">
+      <div style="background: orange;" class="orange" draggable="true"></div>
+      <div style="background: red;" class="red" draggable="true"></div>
+    </div>
+    <!-- <script src="./app.js"></script> -->
+    <script src="./draggable.js"></script>
+  </body>
+</html>
