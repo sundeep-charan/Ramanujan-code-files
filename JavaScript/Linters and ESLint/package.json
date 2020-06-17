@@ -1,0 +1,20 @@
+{
+  "name": "eslint-demo",
+  "version": "1.0.0",
+  "description": "Introduction to Linters",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sundeep Charan Ramkumar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2"
+  }
+}

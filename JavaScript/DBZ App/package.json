@@ -1,0 +1,18 @@
+{
+  "name": "dbz-app",
+  "version": "1.0.0",
+  "description": "A small single page application to showcase all the dragonballZ characters",
+  "main": "app.js",
+  "scripts": {
+    "dev": "parcel index.html"
+  },
+  "author": "Sundeep Charan Ramkumar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "sass": "^1.26.8"
+  }
+}
