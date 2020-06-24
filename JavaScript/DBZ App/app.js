@@ -1,8 +1,11 @@
 import axios from "axios";
 
 // DOM Elements
+var indiSection = find("#individual");
+var homeSection = find("#home");
 var dbzCardContainer = find(".container__characters");
-var loader = find(".loader");
+var homeLoader = find("#home .loader");
+var indiLoader = find("#individual .loader");
 
 // Variables
 var corsErrorRemovalURL = `https://corsanywhere.herokuapp.com/`;
@@ -35,8 +38,38 @@ function renderHTML(dbzCharacters) {
   }
 }
 
+function renderIndiHTML(character) {
+  indiSection.querySelector(".loader").style.display = "none";
+  var indiHTML = `<div class="character__container">
+  <img
+    src="${character.image.replace("../", baseURL)}"
+    alt="Character"
+    class="character__container-image"
+  />
+  <div class="character__container-details">
+    <p class="container__character-name">
+      <span>Name:</span> ${character.name}
+    </p>
+    <p class="container__character-gender">
+      <span>Gender:</span> ${character.gender}
+    </p>
+    <p class="container__character-status">
+      <span>Status:</span> ${character.status}
+    </p>
+    <p class="container__character-planet">
+      <span>Planet:</span> ${character.originPlanet}
+    </p>
+    <p class="container__character-species">
+      <span>Planet:</span> ${character.species}
+    </p>
+  </div>
+</div>`;
+
+  indiSection.insertAdjacentHTML("afterbegin", indiHTML);
+}
+
 function fetchDBZCharacters() {
-  loader.style.display = "block";
+  homeLoader.style.display = "block";
   var characters = localStorage.getItem("characters");
   if (characters) {
     return Promise.resolve(JSON.parse(characters));
@@ -66,40 +99,56 @@ function fetchDBZCharacters() {
 }
 
 function fetchDBZSingleCharacter(characterName) {
-  var indiSection = find("#individual");
-  indiSection.querySelector("h1").textContent = characterName;
+  indiSection.innerHTML = `<div class="loader" style="display: none;">Loading...</div>`;
+  // 1. Switch on the loading
+  indiSection.querySelector(".loader").style.display = "block";
+  // 2. Fetch character data
+  return axios(
+    `${corsErrorRemovalURL}${baseURL}/api/character/${characterName}`
+  ).then(function (response) {
+    console.log(response);
+    return response.data;
+  });
 }
 
 function checkValidHash() {
-  if (
-    window.location.hash !== "#home" &&
-    window.location.hash !== "#individual"
-  ) {
+  if (window.location.hash !== "#home") {
     window.location.hash = "#home";
   }
 }
 
 function renderPage(hashValue) {
   // Make the section visible
-  find(hashValue).style.display = "block";
+  var changedHashValue = hashValue.replace("#", "");
   if (hashValue === "#home") {
+    homeSection.style.display = "block";
     fetchDBZCharacters().then(function (characters) {
-      loader.style.display = "none";
+      homeLoader.style.display = "none";
       renderHTML(characters);
+    });
+  } else {
+    indiSection.style.display = "block";
+    var characterName =
+      changedHashValue[0].toUpperCase() + changedHashValue.slice(1);
+    fetchDBZSingleCharacter(characterName).then(function (character) {
+      if (character === null) {
+        indiSection.querySelector(".loader").style.display = "none";
+        window.location.hash = "#home";
+        return alert("Character not found");
+      }
+      renderIndiHTML(character);
     });
   }
 }
 
 function init() {
-  checkValidHash();
+  // checkValidHash();
   // Rendering that page alone
   renderPage(window.location.hash);
 }
 
 window.addEventListener("hashchange", function () {
   console.log(window.location.hash);
-  // Check and redirect to correct hash
-  checkValidHash();
   // Resetting both the pages' style property
   find("#home").style.display = "none";
   find("#individual").style.display = "none";
@@ -117,8 +166,7 @@ dbzCardContainer.addEventListener("click", function () {
     var containerCard = event.target.closest(".container__character");
     var characterName = containerCard.dataset.name;
     console.log(characterName);
-    window.location.hash = "#individual";
-    fetchDBZSingleCharacter(characterName);
+    window.location.hash = `#${characterName}`;
   }
 });
 
