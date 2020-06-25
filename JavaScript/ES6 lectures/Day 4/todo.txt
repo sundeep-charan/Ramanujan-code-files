@@ -1,0 +1,30 @@
+1. Symbol => A unique method to define values. Even if the inside value is sam, the output will be false. A symbol can be created with the help of Symbol().
+
+2. To create a property/fieldName inside an object from a variable, 
+ => objectName[variableName] = someValue (outside the object)
+ => { 
+      [variableName]: someValue (inside the object)
+    }
+
+3. [1, 2, 3, 4] => How in the world they have the ability to iterate over themselves?
+    Iterators === Function.
+    Symbol(Symbol.iterator)
+    const Symbol.iterator = "Symbol(Symbol.iterator)"
+
+4. What exactly did this Symbol(Symbol.iterator) function had? 
+    It returned a object.
+
+5. What exactly is that object???
+  {
+    next: function () {}
+  }
+
+6. What did the next function return?
+   { 
+     value: number
+     done: boolean
+   }
+
+7. How did we mention our ending point???? 
+    The properties of value as well as done turned to undefined and true respectively AFTER REACHING THE LAST VALUE.
+
