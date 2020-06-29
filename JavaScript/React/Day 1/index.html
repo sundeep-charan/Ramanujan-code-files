@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script type="text/babel">
+      const { Component } = React;
+
+      const boxStyle = {
+        width: "100px",
+        height: "100px",
+        background: "red"
+      };
+
+      // Functional components
+      const AppFunc = () => {
+        return (
+          <>
+            <h1>Hi there</h1>
+            <div style={boxStyle}>I am a box</div>
+          </>
+        );
+      };
+
+      // Class based component
+      class AppClass extends Component {
+        render() {
+          return (
+            <>
+              <h1>Hi there</h1>
+              <div style={boxStyle}>I am a box</div>
+            </>
+          );
+        }
+      }
+
+      // const name = prompt("What is your name?");
+      // JSX = JavaScript XML
+      // const h1Element = <h1 name="something">Hi {2 > 3 ? "Good" : "Bad"}!</h1>;
+      ReactDOM.render(<AppClass />, document.querySelector("#app"));
+    </script>
+  </body>
+</html>
+
+`
