@@ -1,0 +1,4 @@
+.HelpForm {
+  display: flex;
+  flex-direction: column;
+}
