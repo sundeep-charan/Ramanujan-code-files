@@ -1,6 +1,7 @@
 import React from "react";
 
 const Toggle = ({ isSwitchedOn = false, customOnClick }) => {
+  console.log("Toggle render");
   const outerCircleStyle = {
     display: "flex",
     justifyContent: "center",

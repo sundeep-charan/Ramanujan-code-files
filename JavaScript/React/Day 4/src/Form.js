@@ -1,6 +1,16 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
+import Input from "./Input";
 
-class Form extends Component {
+class Form extends PureComponent {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     name: "",
+  //     email: "",
+  //     password: ""
+  //   };
+  // }
+
   state = {
     name: "",
     email: "",
@@ -25,16 +35,21 @@ class Form extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state.name, this.state.password, this.state.email);
+    console.log(
+      this.props,
+      this.state.name,
+      this.state.password,
+      this.state.email
+    );
   };
 
   render() {
     console.log("Rendering");
     return (
       <form onSubmit={this.handleSubmit}>
-        <input
+        <Input
           onChange={this.handleChange}
-          type="text"
+          type="name"
           name="name"
           value={this.state.name}
         />

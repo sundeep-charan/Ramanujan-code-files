@@ -60,16 +60,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form />
+        <Form to={this.state.toggle} />
         <Toggle
           isSwitchedOn={this.state.toggle}
           customOnClick={this.handleToggleState}
         />
         Hi my name is {this.state.name} and I am working as {this.state.job}
-        <User />
-        {this.state.users.map(user => (
+        {/* <User /> */}
+        {/* {this.state.users.map(user => (
           <User key={user.id} currentUser={user} />
-        ))}
+        ))} */}
         {/**
          * [
          * <User key={user.id} currentUser={user} />,
