@@ -1,8 +1,9 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import rootReducer from "./rootReducer";
 import { createTodo } from "./actions/todoActions";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware()));
 
 /* {
   type: 'CREATE_TODO',
@@ -27,7 +28,8 @@ const todoCreateDispatchObject2 = createTodo({
   isCompleted: true
 });
 
-store.dispatch(todoCreateDispatchObject1);
+// store.dispatch({ type: "CREATE_TODO", payload: {} })
+console.log(store.dispatch(todoCreateDispatchObject1));
 store.dispatch(todoCreateDispatchObject2);
 
 console.log(store);

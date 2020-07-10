@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { createTodo } from "../redux/actions/todoActions";
+import { createTodo, deleteTodo } from "../redux/actions/todoActions";
 import { connect } from "react-redux";
 
 class TodoCreate extends Component {
@@ -37,13 +37,14 @@ class TodoCreate extends Component {
   }
 }
 
-const mapDispatchToProps = boomer => {
+const mapDispatchToProps = dispatch => {
   return {
     // propsCreateTodo: function (todo) {
     //   const todoDispatchObject = createTodo(todo);
     //   return dispatch(todoDispatchObject);
     // }
-    propsCreateTodo: todo => boomer(createTodo(todo))
+    propsCreateTodo: todo => dispatch(createTodo(todo)),
+    propsDeleteTodo: todoId => dispatch(deleteTodo(todoId))
   };
 };
 

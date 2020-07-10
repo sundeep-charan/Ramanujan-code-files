@@ -1,0 +1,13 @@
+.todo__form {
+  margin: 4rem auto;
+}
+
+.todo__form input {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+input::placeholder {
+  font-weight: normal;
+  color: #999;
+}

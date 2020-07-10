@@ -1,0 +1,27 @@
+.todo__item {
+  background: #34495e;
+  padding: 2rem;
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.todo__item span {
+  display: inline-block;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+
+.todo__buttons {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.todo__buttons .btn-edit {
+  margin-right: 1rem;
+}

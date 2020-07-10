@@ -1,4 +1,4 @@
-import { CREATE_TODO } from "../actionTypes";
+import { CREATE_TODO, DELETE_TODO } from "../actionTypes";
 
 export const createTodo = todo => {
   return {
@@ -7,12 +7,10 @@ export const createTodo = todo => {
   };
 };
 
-export const deleteTodo = todoId => {
-  return {
-    type: "DELETE_TODO",
-    payload: todoId
-  };
-};
+export const deleteTodo = todoId => ({
+  type: DELETE_TODO,
+  payload: todoId
+});
 
 export const getTodos = () => {
   return {

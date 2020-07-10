@@ -1,0 +1,34 @@
+.todo__edit {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo__edit h2 {
+  color: white;
+  font-size: 4.5rem;
+}
+
+.container-edit {
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit__buttons {
+  margin-top: 3rem;
+}
+
+.edit__buttons .btn-edit {
+  margin-left: 3rem;
+}
