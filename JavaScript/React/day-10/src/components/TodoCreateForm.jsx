@@ -52,10 +52,10 @@ class TodoCreateForm extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    createTodo: todo => dispatch(createTodo(todo))
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     createTodo: todo => dispatch(createTodo(todo))
+//   };
+// };
 
-export default connect(null, mapDispatchToProps)(TodoCreateForm);
+export default connect(null, { createTodo: createTodo })(TodoCreateForm);

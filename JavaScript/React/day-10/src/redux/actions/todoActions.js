@@ -1,3 +1,4 @@
+import axios from "axios";
 import {
   CREATE_TODO,
   GET_TODOS,
@@ -29,14 +30,27 @@ export const updateTodo = (todoId, newTodo) => {
   };
 };
 
-export const getAllTodos = () => {
-  const sampleData = [
-    { id: 1, title: "Todo1", isCompleted: false },
-    { id: 2, title: "Todo2", isCompleted: true },
-    { id: 3, title: "Todo3", isCompleted: true }
-  ];
-  return {
-    type: GET_TODOS,
-    payload: sampleData
+// export const getAllTodos = (todoCount) => {
+//   const sampleData = [
+//     { id: 1, title: "Todo1", isCompleted: false },
+//     { id: 2, title: "Todo2", isCompleted: true },
+//     { id: 3, title: "Todo3", isCompleted: true }
+//   ];
+//   return {
+//     type: GET_TODOS,
+//     payload: sampleData
+//   };
+// };
+
+export const getAllTodos = function (todoCount = 4) {
+  return async function (dispatch) {
+    const { data } = await axios(
+      `https://corsanywhere.herokuapp.com/https://jsonplaceholder.typicode.com/todos`
+    );
+    console.log(data);
+    return dispatch({
+      type: GET_TODOS,
+      payload: data
+    });
   };
 };

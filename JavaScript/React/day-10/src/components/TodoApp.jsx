@@ -5,12 +5,17 @@ import { Redirect } from "react-router-dom";
 import TodoCreateForm from "./TodoCreateForm";
 import TodoList from "./TodoList";
 import TodoEdit from "./TodoEdit";
+import { getAllTodos } from "../redux/actions/todoActions";
 
 class TodoApp extends Component {
   state = {
     editMode: false,
     currentTodoId: null
   };
+
+  componentDidMount() {
+    this.props.getAllTodos();
+  }
 
   switchOnEdit = todoId => {
     console.log("Switched on ");
@@ -46,4 +51,4 @@ const mapStateToProps = storeState => {
   };
 };
 
-export default connect(mapStateToProps)(TodoApp);
+export default connect(mapStateToProps, { getAllTodos: getAllTodos })(TodoApp);
