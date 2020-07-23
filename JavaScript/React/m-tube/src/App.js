@@ -11,6 +11,7 @@ import NavBar from "./components/NavBar";
 import Search from "./components/Search";
 
 import "./App.css";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/profile" component={ProfilePage} />
         <Route exact path="/videos/:videoId" component={VideoDetail} />
         <Route exact path="/playlists" component={PlaylistPage} />
         <Route exact path="/search/:searchQuery" component={SearchResultPage} />
