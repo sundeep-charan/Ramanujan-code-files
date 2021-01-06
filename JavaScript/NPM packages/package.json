@@ -10,7 +10,7 @@
   "author": "Sundeep Charan Ramkumar",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "parcel-bundler": "^1.12.4"
   }
 }
